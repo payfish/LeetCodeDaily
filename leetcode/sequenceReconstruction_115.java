@@ -1,11 +1,16 @@
-package RebuildSequence115;
+package leetcode;
 
 import java.util.ArrayDeque;
 import java.util.HashSet;
 import java.util.Queue;
 import java.util.Set;
 
-public class Solution {
+/**
+ * 115.重建序列
+ */
+
+
+public class sequenceReconstruction_115 {
     public static boolean sequenceReconstruction(int[] nums, int[][] sequences) {
         int n = nums.length;
         int[] indegrees = new int[n + 1];

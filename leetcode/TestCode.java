@@ -13,5 +13,13 @@ public class TestCode {
         assertTrue(ok);
     }
 
+    @Test
+    public void Test899() {
+        String s = "auekjdjeqqa";
+        OrderlyQueue_899 test = new OrderlyQueue_899();
+        String res = test.orderlyQueue(s, 1);
+        System.out.println(res);
+    }
+
 
 }

@@ -29,7 +29,7 @@ public class TestCode {
     @Test
     public void Test636() {
         int n = 2;
-       String []s = {"0:start:0","0:start:2","0:end:5","1:start:6","1:end:6","0:end:7"};
+        String []s = {"0:start:0","0:start:2","0:end:5","1:start:6","1:end:6","0:end:7"};
         List<String> logs = new ArrayList<>();
         for (String s1 : s) {
             logs.add(s1);
@@ -39,5 +39,13 @@ public class TestCode {
         System.out.println(Arrays.toString(res));
     }
 
+    @Test
+    public void Test322() {
+        int amount = 8;
+        int []coins = {2,5};
+        CoinChange_322 cc = new CoinChange_322();
+        int res = cc.coinChange(coins, amount);
+        System.out.println(res);
+    }
 
 }

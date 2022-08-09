@@ -1,13 +1,12 @@
 package leetcode;
 
 import org.junit.Test;
-import org.junit.Assert;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class TestCode {
     @Test
@@ -45,6 +44,18 @@ public class TestCode {
         int []coins = {2,5};
         CoinChange_322 cc = new CoinChange_322();
         int res = cc.coinChange(coins, amount);
+        System.out.println(res);
+    }
+
+    /**
+     * 8/9/2022 14:52
+     */
+    @Test
+    public void Test103() {
+        Integer []o = {0,2,4,1,null,3,-1,5,1,null,6,null,8};
+        TreeNode root = TreeNode.makeTree(o);
+        ZigzagLevelOrder_103 zlo = new ZigzagLevelOrder_103();
+        List<List<Integer>> res = zlo.zigzagLevelOrder(root);
         System.out.println(res);
     }
 

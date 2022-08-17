@@ -59,4 +59,15 @@ public class TestCode {
         System.out.println(res);
     }
 
+    /**
+     * 8/17/2022 10:39
+     */
+    @Test
+    public void Test1302() {
+        Integer []o = {1,2,3,4,5,null,6,7,null,null,null,null,8};
+        TreeNode root = TreeNode.makeTree(o);
+        DeepestLeavesSum_1302 dls = new DeepestLeavesSum_1302();
+        int res = dls.deepestLeavesSum(root);
+        System.out.println(res);
+    }
 }

@@ -4,8 +4,10 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class TestCode {
@@ -29,10 +31,7 @@ public class TestCode {
     public void Test636() {
         int n = 2;
         String []s = {"0:start:0","0:start:2","0:end:5","1:start:6","1:end:6","0:end:7"};
-        List<String> logs = new ArrayList<>();
-        for (String s1 : s) {
-            logs.add(s1);
-        }
+        List<String> logs = new ArrayList<>(List.of(s));
         FuncExclusiveTime_636 fet = new FuncExclusiveTime_636();
         int []res = fet.exclusiveTime(n, logs);
         System.out.println(Arrays.toString(res));
@@ -69,5 +68,39 @@ public class TestCode {
         DeepestLeavesSum_1302 dls = new DeepestLeavesSum_1302();
         int res = dls.deepestLeavesSum(root);
         System.out.println(res);
+    }
+
+    /**
+     * 8/18/2022 13:11
+     */
+    @Test
+    public void Test1224() {
+        int []nums = {1,1,1,2,2,2};
+        MaxEqualFreq_1224 mef = new MaxEqualFreq_1224();
+        int res = mef.maxEqualFreq(nums);
+        System.out.println(res);
+    }
+
+    /**
+     * 9/3/2022 10:39
+     */
+    @Test
+    public void Test646() {
+        int [][]pairs = {{-10,-8}, {8,9}, {-5,0}, {6,10}, {-6,-4}, {1,7}, {9,10}, {-4,7}};
+        FindLongestChain flc = new FindLongestChain();
+        int res = flc.findLongestChain(pairs);
+        System.out.println(res);
+    }
+
+    /**
+     * 9/5/2022 16:30
+     */
+    @Test
+    public void Test297() {
+        Integer[] o = {1, 2};
+        TreeNode root = TreeNode.makeTree(o);
+        Codec ser = new Codec();
+        Codec deser = new Codec();
+        TreeNode ans = deser.deserialize(ser.serialize(root));
     }
 }
